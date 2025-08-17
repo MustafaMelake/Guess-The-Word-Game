@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#eee]">
+  <h1 class="text-center p-[25px] mb-[50px] bg-white font-bold text-4xl"></h1>
+  <div class="guess-game text-center flex w-[1000px] my-[20px] mx-auto items-start justify-between">
+    <div class="game-area text-center">
+      <div class="inputs"></div>
+      <div class="controls">
+        <button class="check">Check Word</button>
+        <button class="hint"><span></span> Hints</button>
+      </div>
+      <div class="message ">
+        <p></p>
+      </div>
+    </div>
+    <div class="key-colors ">
+      <h2 class="text-2xl font-bold mb-[10px]">Key Colors</h2>
+      <div class="key-color flex mb-[10px] bg-white p-[15px] items-start">
+        <div class="key in-place w-[30px] h-[30px] rounded-[15px] mr-[7px] "></div>
+        <div class="key-text text-xl font-bold">Letter is correct and in place.</div>
+      </div>
+      <div class="key-color flex mb-[10px] bg-white p-[15px] items-start">
+        <div class="key not-in-place w-[30px] h-[30px] rounded-[15px] mr-[7px]"></div>
+        <div class="key-text text-xl font-bold">Letter is correct But not in place</div>
+      </div>
+      <div class="key-color flex mb-[10px] bg-white p-[15px] items-start">
+        <div class="key no w-[30px] h-[30px] rounded-[15px] mr-[7px]"></div>
+        <div class="key-text text-xl font-bold">Letter is wrong</div>
+      </div>
+    </div>
+  </div>
+  <footer class="w-full text-center text-xl mt-[50px]"></footer>
+</body>
+<script src="guess.js"></script>
+</html>

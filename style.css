@@ -1,0 +1,133 @@
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color:#f44336;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-area .inputs div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+
+  input {
+    width: 60px !important; 
+    height: 60px !important;
+    font-size: 50px;
+    margin: 0 5px;
+    border: none;
+    background-color: white;
+    caret-color: var(--primary-color);
+    border-bottom: 3px solid #333;
+    &:focus{
+    outline: #ccc;
+    }&.in-place{
+      background-color: #f89e13;
+      color: white;
+      border: #f89e13;
+    }&.not-in-place{
+      background-color: mediumaquamarine;
+      color: white;
+      border: mediumaquamarine;
+    }&.no{
+      background-color: #27303f;
+      color: white;
+      border: #27303f;
+    }
+  }
+}
+
+
+
+.disabled{
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.game-area .inputs div input{
+  width: 30px;
+  height: 35px;
+  padding: 10px;
+  margin-right: 7px;
+}
+
+.in-place{
+  background-color: #f89e13;
+}
+.not-in-place{
+  background-color: mediumaquamarine;
+}
+.no{
+  background-color: #27303f;
+}
+
+.controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      margin: 30px auto;
+      gap: 10px;
+      .check {
+        background-color: var(--primary-color);
+        flex: 1;
+      }
+      .hint {
+        background-color: #009688;
+        width: fit-content;
+      }
+      button {
+        border: none;
+        font-size: 25px;
+        padding: 15px 20px;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      button:disabled {
+        background-color: black;
+        opacity: 0.4;
+        cursor: no-drop;
+      }
+    }
+
+.message {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 50px;
+  span {
+    font-weight: bold;
+    display: block;
+    font-size: 50px;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    margin-top: 10px;
+  }
+  p {
+    margin-top: 15px;
+  }
+}
+
+footer{
+  background-color: rgb(66, 66, 66);
+  color: white;
+ position: relative; /* أو ثابت عادي */
+  bottom: 0;
+  padding: 25px;
+}
